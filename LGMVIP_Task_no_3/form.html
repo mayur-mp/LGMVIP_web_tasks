@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css">
+    <title>Student Registration Form</title>
+</head>
+<body>
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+    <h1> Student Registration Form</h1>
+    
+    <div class="container">
+        <div class="form-container">
+            <form class="input-part" autocomplete="off" novalidate onsubmit="return onFormSubmit(event)">
+                <div>
+                    <label for="studentName">Student Name</label>
+                    <input type="text" placeholder="Enter Full Name" name="studentName" id="studentName" required>
+                </div>
+                <div>
+                    <label for="collegeName">College Name</label>
+                    <input type="text" placeholder="Enter College Name" name="collegeName" id="collegeName" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="Enter The Email" name="email" id="email" required>
+                </div>
+                <div>
+                    <label for="gender">Gender</label>
+                    <input type="text" placeholder="Enter the Gender" name="gender" id="gender" required>
+                </div>
+                <div>
+                    <label for="skills">Skills</label>
+                    <input type="text" placeholder="Skills" name="skills" id="skills" required>
+                </div>
+                <div>
+                    <label for="photo">Photo</label>
+                    <input type="file" name="photo" id="photo" accept="image/*" required>
+                </div>
+                <div class="form-btns">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </div>
+            </form>
+        </div>
+        <div class="table-container">
+            <table class="list" id="storeList">
+                <thead>
+                    <tr>
+                        <th>Photo</th>
+                        <th>Student Name</th>
+                        <th>College Name</th>
+                        <th>Email</th>
+                        <th>Gender</th>
+                        <th>Skills</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Entries will be added here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="form.js" defer></script>
+</body>
+</html>

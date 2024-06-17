@@ -1,0 +1,152 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+  color: #dce1e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+  position: relative;
+  background-image: url('https://wallpapercave.com/wp/wp6424612.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #ff4757;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.form-container, .table-container {
+  background: linear-gradient(45deg, #1e1e1e, #3b3b3b);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  width: 50%;
+}
+
+.input-part {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-part div {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-part label {
+  display: block;
+  margin-bottom: 5px;
+  color: #ff4757;
+}
+
+.input-part input[type="text"],
+.input-part input[type="email"],
+.input-part input[type="file"] {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #1e1e1e;
+  color: #dce1e8;
+}
+
+.input-part input::placeholder {
+  color: #888;
+}
+
+.form-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-btns input {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff4757;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.form-btns input:hover {
+  background-color: #e84118;
+  transform: scale(1.05);
+}
+
+table.list {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table.list th, table.list td {
+  border: 1px solid #444;
+  padding: 10px;
+}
+
+table.list th {
+  background-color: #1d1c1c;
+  color: #ff4757;
+}
+
+table.list td {
+  background-color: #2f2f2f;
+}
+
+table.list td img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Preloader Styles */
+.preloader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.preloader .spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ff4757;
+  border-top: 5px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
